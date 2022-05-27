@@ -1,12 +1,19 @@
-npm install
+if [ "$#" -ne 1 ] ; then
+    echo "Please provide a commit message"
 
-if npm run build ; then
-    echo "Build succeeded"
-    git add *
-    git commit -m "COMPX341-22A-A3 Commiting from CI/CD Pipeline"
-    git push
-else
-    echo "Command failed"
+else 
+    npm install
+
+    if npm run build ; then
+        echo "Build succeeded"
+        git add *
+        git commit -m "$1"
+        git push
+    else
+        echo "Command failed"
+    fi
+
+    npm run start
+
 fi
 
-//npm run start
