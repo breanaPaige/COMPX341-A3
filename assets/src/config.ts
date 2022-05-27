@@ -1,6 +1,5 @@
 // Breana Ahern 1533265
-// Breana Ahern 1533265
-//
+
 export default {
   apiGateway: {
     REGION: "us-east-1",
