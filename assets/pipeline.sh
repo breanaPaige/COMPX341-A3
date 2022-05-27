@@ -9,4 +9,4 @@ else
     echo "Command failed"
 fi
 
-npm run start
+//npm run start
