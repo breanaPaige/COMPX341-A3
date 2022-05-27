@@ -1,7 +1,5 @@
-
-for x in *.ts; do
-    [ -f "$x" ] || break
-    echo '// Breana Ahern 1533265' | cat - $x > temp && mv temp $x
+for i in `find . -name "*.ts" -type f`; do
+    echo '// Breana Ahern 1533265' | cat - $i> temp && mv temp $i
 done
 
 if [ "$#" -ne 1 ] ; then
